@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#eee5d8">
+<title>Aizaz & Ramsha | Reception</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#e9e0d2;
+    color:#403b36;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+.page{
+    width:100%;
+    max-width:600px;
+    margin:auto;
+    background:#f7f3ec;
+    box-shadow:0 0 40px rgba(70,60,50,.15);
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:45px 25px;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 28%),
+        radial-gradient(circle at 80% 80%,rgba(213,203,187,.45),transparent 30%),
+        linear-gradient(145deg,#f8f4ec,#e9dfd0);
+}
+
+.hero:before,
+.hero:after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(151,140,122,.35);
+    border-radius:50%;
+}
+
+.hero:before{
+    width:430px;
+    height:430px;
+    animation:rotate 25s linear infinite;
+}
+
+.hero:after{
+    width:330px;
+    height:330px;
+    animation:rotateReverse 20s linear infinite;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+@keyframes rotateReverse{
+    from{transform:rotate(360deg)}
+    to{transform:rotate(0deg)}
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.small-title{
+    font-size:10px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#877d70;
+    margin-bottom:25px;
+}
+
+.ornament{
+    font-family:serif;
+    color:#9b907f;
+    font-size:22px;
+    margin:12px 0;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:56px;
+    font-weight:500;
+    line-height:.95;
+    color:#514a42;
+}
+
+.hero .amp{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    font-style:italic;
+    color:#9b907f;
+    margin:12px 0;
+}
+
+.subtitle{
+    font-family:'Cormorant Garamond',serif;
+    font-size:20px;
+    font-style:italic;
+    color:#756b60;
+}
+
+.open-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:14px 30px;
+    border:1px solid #a89c8b;
+    color:#62594e;
+    text-decoration:none;
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    transition:.4s;
+}
+
+.open-btn:hover{
+    background:#62594e;
+    color:white;
+}
+
+.scroll{
+    position:absolute;
+    bottom:25px;
+    font-size:9px;
+    letter-spacing:3px;
+    color:#8d8377;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(8px)}
+}
+
+/* ---------- GENERAL ---------- */
+
+.section{
+    position:relative;
+    padding:80px 28px;
+    text-align:center;
+    background:#f7f3ec;
+}
+
+.section:nth-child(even){
+    background:#eee7dc;
+}
+
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:36px;
+    font-weight:500;
+    color:#504940;
+    margin-bottom:15px;
+}
+
+.line{
+    width:55px;
+    height:1px;
+    background:#aaa091;
+    margin:18px auto 30px;
+}
+
+.text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:21px;
+    line-height:1.5;
+    color:#665e54;
+}
+
+/* ---------- COUPLE ---------- */
+
+.couple{
+    padding-top:75px;
+}
+
+.avatar-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.avatar{
+    width:125px;
+    height:155px;
+    border-radius:70px 70px 45px 45px;
+    background:linear-gradient(145deg,#ddd2c3,#f5efe6);
+    border:1px solid #b9ae9d;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(80,70,60,.12);
+}
+
+.avatar:before{
+    content:"";
+    position:absolute;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#d0b9a3;
+    top:25px;
+    left:27px;
+}
+
+.avatar:after{
+    content:"";
+    position:absolute;
+    width:105px;
+    height:90px;
+    border-radius:50% 50% 0 0;
+    background:#b7aa98;
+    bottom:-15px;
+    left:10px;
+}
+
+.avatar-label{
+    font-size:8px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#82786c;
+    margin-top:8px;
+}
+
+.names{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    line-height:1.15;
+    color:#4f4840;
+}
+
+.parents{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    font-style:italic;
+    line-height:1.6;
+    color:#766d62;
+    margin-top:12px;
+}
+
+.and{
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    font-style:italic;
+    color:#a09688;
+}
+
+/* ---------- INVITATION ---------- */
+
+.invitation{
+    padding:85px 32px;
+}
+
+.invitation-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    line-height:1.7;
+    color:#62594f;
+}
+
+.reception{
+    font-family:'Cormorant Garamond',serif;
+    font-size:38px;
+    margin-top:8px;
+    color:#4f4840;
+}
+
+/* ---------- DATE ---------- */
+
+.date-box{
+    border-top:1px solid #bdb2a3;
+    border-bottom:1px solid #bdb2a3;
+    padding:25px 10px;
+    margin-top:25px;
+}
+
+.date{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    color:#514940;
+}
+
+.time{
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#80766a;
+    margin-top:7px;
+}
+
+/* ---------- VENUE ---------- */
+
+.venue-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    color:#514940;
+}
+
+.address{
+    font-size:13px;
+    line-height:1.8;
+    color:#766d62;
+    margin:15px auto;
+    max-width:360px;
+}
+
+.map-btn,
+.rsvp-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:13px 25px;
+    border:1px solid #a99d8d;
+    text-decoration:none;
+    color:#5f564b;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    transition:.3s;
+}
+
+.map-btn:hover,
+.rsvp-btn:hover{
+    background:#61584d;
+    color:white;
+}
+
+/* ---------- COUNTDOWN ---------- */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:30px;
+}
+
+.count{
+    min-width:62px;
+    padding:12px 5px;
+    border:1px solid #c2b7a8;
+}
+
+.count strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    font-weight:500;
+}
+
+.count span{
+    font-size:7px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#80766a;
+}
+
+/* ---------- DUA ---------- */
+
+.dua{
+    padding:90px 30px;
+    background:
+        radial-gradient(circle at center,#f8f4ed,#e9e0d3);
+}
+
+.dua-arabic{
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    line-height:1.8;
+    color:#514940;
+}
+
+.dua-english{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    line-height:1.6;
+    font-style:italic;
+    color:#756c61;
+    margin-top:22px;
+}
+
+/* ---------- RSVP ---------- */
+
+.rsvp-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+    color:#514940;
+}
+
+.phone{
+    margin-top:7px;
+    font-size:14px;
+    letter-spacing:1px;
+    color:#766d62;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer{
+    padding:55px 25px;
+    text-align:center;
+    background:#e5dccf;
+}
+
+.footer .names-small{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#554d44;
+}
+
+.footer p{
+    font-size:9px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#81776b;
+    margin-top:15px;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:480px){
+    .hero h1{
+        font-size:48px;
+    }
+
+    .section{
+        padding:70px 22px;
+    }
+
+    .avatar{
+        width:110px;
+        height:140px;
+    }
+
+    .avatar:before{
+        width:62px;
+        height:62px;
+        left:24px;
+    }
+
+    .avatar:after{
+        width:95px;
+        left:7px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">A Walima Reception</div>
+
+        <div class="ornament">✦</div>
+
+        <h1>Aizaz</h1>
+
+        <div class="amp">&</div>
+
+        <h1>Ramsha</h1>
+
+        <div class="ornament">❦</div>
+
+        <div class="subtitle">
+            A celebration of love, family & togetherness
+        </div>
+
+        <a href="#invitation" class="open-btn">
+            Open Invitation
+        </a>
+
+    </div>
+
+    <div class="scroll">SCROLL ↓</div>
+
+</section>
+
+
+<!-- COUPLE -->
+<section class="section couple">
+
+    <div class="small-title">The Couple</div>
+
+    <div class="avatar-area">
+
+        <div>
+            <div class="avatar"></div>
+            <div class="avatar-label">Groom</div>
+        </div>
+
+        <div class="and">&</div>
+
+        <div>
+            <div class="avatar"></div>
+            <div class="avatar-label">Bride</div>
+        </div>
+
+    </div>
+
+    <div class="names">
+        Aizaz Hussain
+    </div>
+
+    <div class="parents">
+        Son of Aijaz Hussain
+    </div>
+
+    <div class="and" style="margin:12px 0;">and</div>
+
+    <div class="names">
+        Ramsha Muneer
+    </div>
+
+    <div class="parents">
+        Daughter of Muneer Memon
+    </div>
+
+</section>
+
+
+<!-- INVITATION -->
+<section class="section invitation" id="invitation">
+
+    <div class="small-title">With Joy & Gratitude</div>
+
+    <div class="line"></div>
+
+    <div class="invitation-text">
+        request the pleasure of your presence
+    </div>
+
+    <div class="reception">
+        at their Reception
+    </div>
+
+    <div class="date-box">
+
+        <div class="date">
+            Sunday • 6 September
+        </div>
+
+        <div class="time">
+            8:30 PM
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+<section class="section">
+
+    <div class="small-title">Until We Celebrate</div>
+
+    <div class="section-title">Counting the Moments</div>
+
+    <div class="line"></div>
+
+    <div class="countdown">
+
+        <div class="count">
+            <strong id="days">--</strong>
+            <span>Days</span>
+        </div>
+
+        <div class="count">
+            <strong id="hours">--</strong>
+            <span>Hours</span>
+        </div>
+
+        <div class="count">
+            <strong id="minutes">--</strong>
+            <span>Minutes</span>
+        </div>
+
+        <div class="count">
+            <strong id="seconds">--</strong>
+            <span>Seconds</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VENUE -->
+<section class="section">
+
+    <div class="small-title">The Celebration</div>
+
+    <div class="section-title">Join Us</div>
+
+    <div class="line"></div>
+
+    <div class="venue-name">
+        Palm Banquet
+    </div>
+
+    <div class="address">
+        Commercial 4, Block 5,<br>
+        Block 1, Clifton,<br>
+        Karachi, 75600
+    </div>
+
+    <a
+      class="map-btn"
+      href="https://maps.app.goo.gl/dd9roooGE671KxfH9?g_st=aw"
+      target="_blank">
+      View Location
+    </a>
+
+</section>
+
+
+<!-- RSVP -->
+<section class="section">
+
+    <div class="small-title">Kindly Respond</div>
+
+    <div class="section-title">RSVP</div>
+
+    <div class="line"></div>
+
+    <div class="rsvp-name">
+        Zeeshan Fazal
+    </div>
+
+    <div class="phone">
+        0321-9200667
+    </div>
+
+    <a
+      class="rsvp-btn"
+      href="https://wa.me/923219200667?text=Assalamualaikum%2C%20I%20would%20like%20to%20confirm%20my%20attendance%20at%20the%20Reception%20of%20Aizaz%20Hussain%20%26%20Ramsha%20Muneer."
+      target="_blank">
+      RSVP on WhatsApp
+    </a>
+
+</section>
+
+
+<!-- DUA -->
+<section class="section dua">
+
+    <div class="ornament">✦</div>
+
+    <div class="small-title">A Beautiful Dua</div>
+
+    <div class="dua-arabic">
+        Baarakallaahu laka,<br>
+        wa baaraka 'alayka,<br>
+        wa jama'a baynakumaa fee khayr
+    </div>
+
+    <div class="dua-english">
+        “May Allah bless you, shower His blessings upon you,
+        and unite you both in goodness.”
+    </div>
+
+    <div class="ornament">❦</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="names-small">
+        Aizaz & Ramsha
+    </div>
+
+    <p>
+        With love & warm wishes
+    </p>
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* Countdown to 6 September 2026, 8:30 PM */
+
+const targetDate = new Date("September 6, 2026 20:30:00").getTime();
+
+function updateCountdown(){
+
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if(distance <= 0){
+        document.getElementById("days").innerText = "0";
+        document.getElementById("hours").innerText = "0";
+        document.getElementById("minutes").innerText = "0";
+        document.getElementById("seconds").innerText = "0";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
